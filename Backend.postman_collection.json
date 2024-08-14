@@ -1,0 +1,192 @@
+{
+	"info": {
+		"_postman_id": "adf45e52-31c0-4681-b434-3d85eed973a3",
+		"name": "Projeto Back Elektro",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37032843"
+	},
+	"item": [
+		{
+			"name": "CRUD usuario",
+			"item": [
+				{
+					"name": "CriaUsuario",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"julia\",\r\n    \"email\": \"juju@gmail.com\",\r\n    \"telefone\": 8686868,\r\n    \"senha\": \"jhjhj\",\r\n    \"sexo\": \"fem\",\r\n    \"tipo\": \"VENDEDOR\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3333/usuario",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"usuario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RetornaUsuario",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://localhost:3333/usuario/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"usuario",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeletaUsuario",
+					"request": {
+						"method": "DELETE",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "AtualizaUsuario",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"cris\",\r\n    \"email\": \"juju@gmail.com\",\r\n    \"telefone\": 8686868,\r\n    \"senha\": \"jhjhj\",\r\n    \"sexo\": \"fem\",\r\n    \"tipo\": \"VENDEDOR\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3333/usuario/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"usuario",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CRUD endereço",
+			"item": [
+				{
+					"name": "CriaEndereco",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"CEP\": 34234,\r\n    \"rua\": \"silveira martins\",\r\n    \"cidade\": \"rio\",\r\n    \"bairro\": \"catete\",\r\n    \"numero\": 43,\r\n    \"complemento\": 201\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3333/usuario/2/endereco",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"usuario",
+								"2",
+								"endereco"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RetornaEndereco",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3333/usuario/2/endereco",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"usuario",
+								"2",
+								"endereco"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeletaEndereco",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3333/usuario/2/endereco",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"usuario",
+								"2",
+								"endereco"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AtualizaEndereco",
+					"request": {
+						"method": "PUT",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
